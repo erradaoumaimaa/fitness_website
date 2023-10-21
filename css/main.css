@@ -426,21 +426,243 @@ input:checked + .slider:before{
 }
 
 .container_client{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; 
   width: auto;
-height: 756px;
+  height: auto;
   background-color: #7DB0DE;
 }
 .heading2{
   letter-spacing: 1px;
-  margin: 30px 0px;
+   margin: 30px 0px ; 
   padding: 10px 20px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  width: auto;
+  height: 100px;
+
+
+}
+.heading2 h3{
   font-size: 2.2rem ;
-  font-weight: 500;
-  background-color: #31C75B;
+  font-weight: bold;
+  color: #202020;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  
+}
+.client_box_container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.client_box{
+  width: 550px;
+  box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
+  background-color: #e9f0eb;
+  padding: 20px;
+  margin: 15px;
+ transform: translateY(-30px);
+  cursor: pointer;
+}
+.profile_img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
+}
+.profile_img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.profile{
+  display: flex;
+  align-items: center;
+}
+.name_user{
+  display: flex;
+  flex-direction: column;
+}
+.name_user strong{
+  color: #3d3d3d;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+.name_user span{
+    color: #979797;
+    font-size: 0.8rem;
+}
+.reviews{
+  color: #f9d71c;
+}
+.box_top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.client_comment p{
+  font-size: 0.9rem;
+  color: #4b4b4b;
+}
+.client_box:hover{
+  transform: translateY(-10px);
+  transition: all ease 0.3s;
+}
+@media(max-width:1060px){
+  .client_box{
+    width: 45%;
+    padding: 10px 0 20px;
+  }
+}
+@media(max-width:790px){
+  .client_box{
+    width: 100%;
+  }
+  .heading2{
+    font-size: 1.4rem;
+  }
+  .reviews{
+    margin-top: 10px;
+  }
+}
+::selection{
+  color: #e9f0eb;
+  background-color: #000;
+}
+ .faq{
+  width: auto;
+  height: 700px;
+  background: #31C75B;
+  margin-top:-30px;
+} 
+
+.faq .contentBx{
+  margin-bottom: 400px;
+  position: relative;
+  margin: 10px 20px 28px;
+}
+.faq .contentBx .label1{
+  color: #000;
+  margin-left: 150px;
+  margin-right: 50px;
+  width: 80%;
+  font-family: Koh Santepheap;
+  font-size: 33px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  position: relative;
+  padding: 10px;
+  background: #7DB0DE;
+  cursor: pointer;
+}
+.faq .contentBx .label1::before{
+  content: '+';
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  font-size: 1.5em;
+}
+.faq .contentBx.active .label1::before{
+  content: '-';
+}
+ .faq .contentBx .content{
+    position: relative;
+    background: #fff;
+    width: 80%;
+    margin-left: 150px;
+    margin-right: 50px;
+    height: 0; 
+    overflow: hidden;
+    transition: 0.5s;
+    overflow-y: auto; 
+} 
+.faq .contentBx.active .content{
+  height: 60px;
+  padding: 10px;
+}
+/* Styles pour les grands écrans d'ordinateur (à partir de 1280px) */
+@media (min-width: 1280px) {
+  .faq .contentBx {
+    margin: 10px 20px 28px;
+  }
+
+  .faq .contentBx .label1 {
+    margin-left: 150px;
+    margin-right: 50px;
+    width: 80%;
+  }
+
+  .faq .contentBx .content {
+    margin-left: 150px;
+    margin-right: 50px;
+  }
+}
+
+/* Styles pour les petits écrans d'ordinateur (de 1024px à 1279px) */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .faq .contentBx {
+    margin: 10px 20px 28px;
+  }
+
+  .faq .contentBx .label1 {
+    margin-left: 150px;
+    margin-right: 50px;
+    width: 80%;
+  }
+
+  .faq .contentBx .content {
+    margin-left: 150px;
+    margin-right: 50px;
+  }
+}
+
+/* Styles pour les tablettes (de 768px à 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .faq .contentBx {
+    margin: 10px 20px 28px;
+  }
+
+  .faq .contentBx .label1 {
+    margin-left: 50px;
+    margin-right: 20px;
+    width: 90%;
+  }
+
+  .faq .contentBx .content {
+    margin-left: 50px;
+    margin-right: 20px;
+  }
+}
+
+/* Styles pour les mobiles (jusqu'à 767px) */
+@media (max-width: 767px) {
+  .faq .contentBx {
+    margin: 10px 20px 28px;
+  }
+
+  .faq .contentBx .label1 {
+    margin-left: 20px;
+    margin-right: 10px;
+    width: 100%;
+  }
+
+  .faq .contentBx .content {
+    margin-left: 20px;
+    margin-right: 10px;
+  }
 }
 /* 
 footer{ 
