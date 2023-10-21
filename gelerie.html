@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie</title>
+    <style>
+        .elm{
+            background-color: blueviolet;
+            color: aliceblue;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <div class="elm">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Iure quidem ipsa aspernatur dolores magni id expedita culpa
+         architecto porro vel! Amet non assumenda explicabo itaque 
+         magni ea ratione blanditiis architecto ad facilis quam odio 
+         nam, in harum perferendis aspernatur maxime deserunt ab,
+          tempora mollitia sed, labore delectus numquam? Corporis 
+          rerum voluptatum quia repellendus vitae totam ex qui,
+           nihil animi alias perspiciatis debitis aperiam similique 
+           magni tempore quod, veritatis eos. Eaque ullam quaerat 
+           consequatur enim natus nihil eligendi molestias laudantium hic.
+            Eos molestiae et repellendus minima, sint sapiente incidunt 
+            eius, ab soluta expedita, consectetur quaerat sit odit ducimus 
+            porro excepturi voluptatum.
+    </div>
+    <button class="download">Dowload PDF</button>
+    <script>
+        let div = document.querySelector(".elem");
+        let btn = document.querySelector(".download");
+        btn.addEventListener('click',()=>{html2pdf().form(div).save()
+        })
+     </script>   
+</body>
+</html>

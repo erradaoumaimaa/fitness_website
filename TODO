@@ -1,0 +1,50 @@
+
+Todo:
+  ☐ page home page :
+
+
+ 
+  Le site doit s'adapter parfaitement a tout type d'écrans :
+    __Grand Écran d'Ordinateur : À partir de 1280px de large.
+    @media screen and (min-width: 1280px) {
+  /* Vos styles CSS pour les grands écrans d'ordinateur vont ici */
+}
+    __Petit Écran d'Ordinateur : De 1024px à 1279px de large.
+    @media screen and (min-width: 1280px) {
+  /* Vos styles CSS pour les grands écrans d'ordinateur vont ici */
+}
+    __Tablette : De 768px à 1023px de large.
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+  /* Vos styles CSS pour les tablettes vont ici */
+}
+    __Mobile : Jusqu'à 767px de large.
+    @media screen and (max-width: 767px) {
+  /* Vos styles CSS pour les mobiles vont ici */
+}
+La page galerie dowload image :
+
+  -image: select by category.
+  -video: under the page.
+
+
+ La page inscription dowload image :
+
+1: premierement choisit le programme  apres faire l'inscription Page Subscribe regex
+2: il choisit un programme il s'affiche 
+titre 
+details 
+horaires
+ avantage
+                  add an option to dowload as pdf file .
+
++must flex using in real project:
+  
+form regex  :
+  <form autocomplete="off"
+  on	Default. The browser will automatically complete values based on values that the user has entered before
+off	The user must enter a value into each field for every use. The browser does not automatically complete entries
+  >
+
+
+
+ 

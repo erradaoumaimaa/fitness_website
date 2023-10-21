@@ -6,12 +6,194 @@
     <link rel="stylesheet" href="css/main.css">
     <!--import font google -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <!--import font-awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
-    <title> FITPRO</title>
+    <!-- Import the icon library CSS -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <!-- Import the icon fontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--l'icône s'affiche dans la barre de titre du navigateur à côté du texte du titre https://favicon.io/ -->
+    <title>FITPRO</title>
+    <link rel="shortcut icon" href="./img/jj.jpg" > 
+    <!-- <link rel="icon" href="./img/favicon/favicon.ico" type="image/x-icon"> -->
 </head>
 <body>
+    <!-- start navbar-->
+    <header>
+        <div class="navbar">
+        <div class="logo">
+            <a href="index.html"> FITPRO </a>
+        </div>
+        <ul class="links">
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="gelerie.html">Galerie</a></li>
+            <li><a href="programs.html">Programs</a></li>
+        </ul>
+        <a href="index.html" class="action_btn">Get Started</a>
+        <!-- <div class="toggle_btn">
+            <i class="fa-solid fa-bars" style="color: #00060f;"></i>
+        </div>   -->
+    </div>
+    </header>
     
+    <!--end navbar-->
+
+    <!--start main-->
+    <div class="home">
+       <div class="content">
+            <h3>Never Give Up On Your Dreams </h3>
+            <div class="cercle">
+                <img  class="image"  src="img/yy.png" alt="gym">
+          </div>
+        </div> 
+    </div>
+
+    <!--end main-->
+    <!--Why Choose Us-->
+    <div class="choose">
+        <div class="head1">
+             <h3 class="heading">Why Choose Us</h3>
+            <p class="parag1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit ipsa quis molestiae ex eligendi ad nostrum corrupti! Quidem optio quo voluptates</p>
+        </div>
+        <div class="box_container">
+            <div class="box">
+                <img class="icon"  src="img/icon1.png" alt="">
+                <h3>lorem ipsum1</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+            </div>
+            <div class="box">
+                <img class="icon"  src="img/icon2.png" alt="">
+                <h3>lorem ipsum2</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+            </div>
+            <div class="box">
+                <img  class="icon"  src="img/icon3.png" alt="">
+                <h3>lorem ipsum3</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+            </div>
+            <div class="box">
+                <img  class="icon" src="img/icon4.png" alt="">
+                <h3>lorem ipsum4</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+            </div>
+        </div>
+    </div> 
+
+    <!--end Why Choose Us-->
+    <!--Our Gelerie-->
+        <div class="Galerie">
+            <div class="heading_button">
+                <div class="text_container">
+                    <h3 class="heading1">Explore <br> our fitness club</h3>
+                </div>
+                <div class="button_container">
+                    <a href="galerie.html" class="action_btn1">View All Galerie</a>
+                </div>
+            </div>
+            <div class="box_container_img">
+                <div class="box_img">
+                <img src="img/img1.png" alt="" width="327" height="160">
+                </div>
+                <div class="box_img">
+                <img src="img/img2.png" alt="" width="327" height="160">
+                </div>
+                 <div class="box_img">
+                <img src="img/img3.png" alt="" width="327" height="160">
+                </div>
+                <div class="box_img">
+                    <img src="img/img4.png" alt="" width="327" height="160">
+                    </div> 
+            </div>
+           
+        </div>
+    <!--end Our Gelerie-->
+    <!--Our Services-->
+        <div class="container_service">
+            <div class="top">
+                <div class="toogle">
+                    <span style="margin: 0.8em;">Annually</span>
+                    <label class="switch">
+                        <input type="checkbox" id="checkbox" onclick="check()">
+                        <span class="slider round"></span>
+                    </label>
+                    <span style="margin: 0.8em;">Monthly</span>
+                </div>
+            </div>
+            <div class="package_container">
+                <div class="packages">
+                     <h1 class="first">Basic</h1>
+                     <h2 class="text1">&dollar;9.99</h2>
+                     <h2 class="text2">&dollar;119.99</h2>
+                     <ul class="list">
+                        <li>2000 Subscribers</li>
+                        <li>12,000 Emails/month</li>
+                        <li>Multi-User Accounts</li>
+                        <li>Email Support</li>
+                     </ul>
+                     <a href="register.html" class="button">Start Now</a>
+                </div>
+                <div class="packages">
+                    <h1 class="first">Professional</h1>
+                    <h2 class="text1">&dollar;19.99</h2>
+                    <h2 class="text2">&dollar;239.99</h2>
+                    <ul class="list">
+                       <li>Basic +</li>
+                       <li>Landing Pages</li>
+                       <li>Multi-User Accounts</li>
+                       <li>Email Support</li>
+                    </ul>
+                    <a href="register.html" class="button">Start Now</a>
+               </div>
+               <div class="packages">
+                <h1 class="first">Master</h1>
+                <h2 class="text1">&dollar;29.99</h2>
+                <h2 class="text2">&dollar;359.99</h2>
+                <ul class="list">
+                   <li>2000 Subscribers</li>
+                   <li>12,000 Emails/month</li>
+                   <li>Multi-User Accounts</li>
+                   <li>Email Support</li>
+                </ul>
+                <a href="register.html" class="button">Start Now</a>
+           </div>
+            </div>
+        </div>
+
+        <script>
+            function check(){
+                var checkBox=document.getElementById("checkbox");
+                var text1=document.getElementsByClassName("text1");
+                var text2=document.getElementsByClassName("text2");
+
+                for(var i=0; i < text1.length;i++){
+                    if(checkBox.checked==true){
+                       text1[i].style.display="block";
+                        text2[i].style.display="none"; 
+                    }else if(checkBox.checked==false){
+                        text1[i].style.display="none";
+                        text2[i].style.display="block"; 
+                    }
+                        
+                }
+            }
+            check()
+        </script>
+    <!--end Our Services-->
+    <!--Our Client-->
+        <div class="container_client">
+            <h3 class="heading2">Clients Says</h3>
+            
+        </div>
+    <!--end Our Client-->
+    <!--FAQs-->
+    
+    <!--end FAQs-->
+    <!-- <footer>
+        <div class="footer_social">
+            <a class="icon" href="https://www.instagram.com/fitpro_/" >  <i class="fab fa-instagram"></i></a>-->
+            <!-- <a class="icon" href="https://www.facebook.com/Fitpro-10090909090909/" ><i class="fab fa-facebook-f"></i></a> -->
+            <!-- <a class="icon" href="https://www.twitter.com/fitpro_/" ><i class="fab fa-twitter"></i></a> -->
+            <!-- <a class="icon" href="https://www.twitter.com/fitpro_/" ><i class="fab fa-twitter"></i></a> -->
+
+        </div>
+    </footer> 
 </body>
 </html>
