@@ -3,37 +3,168 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galerie</title>
-    <style>
-        .elm{
-            background-color: blueviolet;
-            color: aliceblue;
-        }
-    </style>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="css/galerie_style.css">
+    <!--import font google -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!-- Import the icon library CSS -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <!-- Import the icon fontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--l'icône s'affiche dans la barre de titre du navigateur à côté du texte du titre https://favicon.io/ -->
+    <title>FITPRO</title>
+    <link rel="shortcut icon" href="./img/jj.jpg" > 
 </head>
 <body>
-    <div class="elm">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Iure quidem ipsa aspernatur dolores magni id expedita culpa
-         architecto porro vel! Amet non assumenda explicabo itaque 
-         magni ea ratione blanditiis architecto ad facilis quam odio 
-         nam, in harum perferendis aspernatur maxime deserunt ab,
-          tempora mollitia sed, labore delectus numquam? Corporis 
-          rerum voluptatum quia repellendus vitae totam ex qui,
-           nihil animi alias perspiciatis debitis aperiam similique 
-           magni tempore quod, veritatis eos. Eaque ullam quaerat 
-           consequatur enim natus nihil eligendi molestias laudantium hic.
-            Eos molestiae et repellendus minima, sint sapiente incidunt 
-            eius, ab soluta expedita, consectetur quaerat sit odit ducimus 
-            porro excepturi voluptatum.
-    </div>
-    <button class="download">Dowload PDF</button>
+        <!-- start navbar-->
+        <header>
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html"> FITPRO </a>
+                </div>
+                <ul class="links">
+                    <li><a  href="index.html">Home</a></li>
+                    <li><a class="active" href="gelerie.html">Galerie</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                </ul>
+                <a href="index.html" class="action_btn">Get Started</a>
+                <!-- <div class="toggle_btn">
+                    <i class="fa-solid fa-bars" style="color: #00060f;"></i>
+                </div>   -->
+             </div>
+        </header>
+          <!--end navbar-->
+        <section>
+            <ul>
+                <li class="list active" data-filter="all">All Photos</li>
+                <li class="list" data-filter="trainer">trainner</li>
+                <li class="list" data-filter="equipement">Equipement</li>
+                <li class="list" data-filter="gym">GYM</li>
+            </ul>
+            <div class="product">
+                    <div class="itemBox" data-item="equipement">
+                        <img src="./img/jj.jpg">
+                    </div>
+                    <div class="itemBox" data-item="trainer">
+                        <img src="./img/img2.png">
+                    </div>
+                    <div class="itemBox" data-item="gym">
+                        <img src="./img/img4.png">
+                    </div>
+                    <div class="itemBox" data-item="trainer">
+                        <img src="./img/fit3.jpg">
+                    </div>
+                    <div class="itemBox" data-item="equipement">
+                        <img src="./img/img1.png">
+                    </div>
+                    <div class="itemBox" data-item="equipement">
+                        <img src="./img/jj.jpg">
+                    </div>
+                    <div class="itemBox" data-item="trainer">
+                        <img src="./img/img2.png">
+                    </div>
+                    <div class="itemBox" data-item="gym">
+                        <img src="./img/img4.png">
+                    </div>
+                    <div class="itemBox" data-item="trainer">
+                        <img src="./img/fit3.jpg">
+                    </div>
+                    <div class="itemBox" data-item="equipement">
+                        <img src="./img/img1.png">
+                    </div>
+                    <div class="itemBox" data-item="equipement">
+                        <img src="./img/jj.jpg">
+                    </div>
+                    <div class="itemBox" data-item="trainer">
+                        <img src="./img/img2.png">
+                    </div>
+                    <div class="itemBox" data-item="gym">
+                        <img src="./img/img4.png">
+                    </div>
+                    <div class="itemBox" data-item="trainer">
+                        <img src="./img/fit3.jpg">
+                    </div>
+                    <div class="itemBox" data-item="equipement">
+                        <img src="./img/img1.png">
+                    </div>
+                    <div class="itemBox" data-item="equipement">
+                        <img src="./img/jj.jpg">
+                    </div>
+                    <div class="itemBox" data-item="trainer">
+                        <img src="./img/img2.png">
+                    </div>
+                    <div class="itemBox" data-item="gym">
+                        <img src="./img/img4.png">
+                    </div>
+                    <div class="itemBox" data-item="trainer">
+                        <img src="./img/fit3.jpg">
+                    </div>
+                    <div class="itemBox" data-item="equipement">
+                        <img src="./img/img1.png">
+                    </div>
+                    <div class="itemBox" data-item="equipement">
+                        <img src="./img/jj.jpg">
+                    </div>
+                    <div class="itemBox" data-item="trainer">
+                        <img src="./img/img2.png">
+                    </div>
+                    <div class="itemBox" data-item="gym">
+                        <img src="./img/img4.png">
+                    </div>
+                    <div class="itemBox" data-item="trainer">
+                        <img src="./img/fit3.jpg">
+                    </div>
+                    <div class="itemBox" data-item="equipement">
+                        <img src="./img/img1.png">
+                    </div>
+                    <div class="itemBox" data-item="equipement">
+                        <img src="./img/jj.jpg">
+                    </div>
+                    <div class="itemBox" data-item="trainer">
+                        <img src="./img/img2.png">
+                    </div>
+                    <div class="itemBox" data-item="gym">
+                        <img src="./img/img4.png">
+                    </div>
+                    <div class="itemBox" data-item="trainer">
+                        <img src="./img/fit3.jpg">
+                    </div>
+                    <div class="itemBox" data-item="equipement">
+                        <img src="./img/img1.png">
+                    </div>
+                </div>
+        </section>
+        <div class="video">
+            <iframe
+                width="100%"
+                height="300px"
+                src="https://www.youtube.com/embed/mBY68kFvhq8?si=IyMpwqRtgFWsygvI"
+                frameborder="0" 
+                allowfullscreen
+
+                ></iframe>
+          
+        </div>
     <script>
-        let div = document.querySelector(".elem");
-        let btn = document.querySelector(".download");
-        btn.addEventListener('click',()=>{html2pdf().form(div).save()
+        let list = document.querySelectorAll('.list');
+        let itemBox=document.querySelectorAll('.itemBox');
+        for(let i=0;i<list.length;i++){
+            list[i].addEventListener('click',function(){
+                for(let j=0;j<list.length;j++){
+                    list[j].classList.remove('active');
+            }
+            this.classList.add('active');
+            let dataFilter=this.getAttribute('data-filter');
+            for(let k=0;k<itemBox.length;k++){
+                itemBox[k].classList.remove('active');
+                itemBox[k].classList.add('hide');
+                if(itemBox[k].getAttribute('data-item')==dataFilter ||
+                dataFilter=="all"){
+                    itemBox[k].classList.remove('hide');
+                    itemBox[k].classList.add('active');
+                }
+            }
         })
-     </script>   
+        }
+    </script>
 </body>
 </html>
