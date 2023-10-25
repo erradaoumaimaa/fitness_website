@@ -12,72 +12,474 @@ body{
     background-color: #FEF6F3;
 }
 header {
-    display: fixed;
-    height: auto;
-    margin-top: -1px;
-    background-color: #fff;
-    padding: 0;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-  }
-  
+  display: fixed;
+  height: auto;
+  margin-top: -1px;
+  background-color: #fff;
+  padding: 0;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
 
-  .navbar {
-    width: 100%;
-    height: 60px;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
+
+.navbar {
+  width: 100%;
+  height: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 li {
-    list-style: none;
+  list-style: none;
 }
 a {
-    text-decoration: none;
-    color: #0B0A0A;
-    font-size: 1rem;
+  text-decoration: none;
+  color: #0B0A0A;
+  font-size: 1rem;
 }
 a:hover {
-    color: #FE6344;
+  color: #FE6344;
 }
-
-
-
-
 .navbar .logo a{
-    /* margin-left: -120px; */
-     font-size: 1.5rem;
-     font-weight: bold;
-    }
+  /* margin-left: -120px; */
+   font-size: 1.5rem;
+   font-weight: bold;
 
-.navbar .links{
-    display: flex;
-    gap: 2rem;
+
+
+  }
+
+  .navbar .links{
+  display: flex;
+  gap: 2rem;
 }
 header .navbar a.active {
-    color: #FE6344;
-    font-weight: bold;
-    border-bottom: 2px solid #FE6344;
-    padding-bottom: 5px; /* Add some padding at the bottom */
+  color: #FE6344;
+  font-weight: bold;
+  border-bottom: 2px solid #FE6344;
+  padding-bottom: 5px; /* Add some padding at the bottom */
 }
-.navbar .toogle_btn{
-    color: #fff;
-    font-size: 1.5rem;
-    cursor: pointer;
-    display: none;
+.burger-menu {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
 }
 /* 
 .action_btn{
-    background-color: #FE6344;
-    color: #fff;
-    padding:0.5rem 1rem;
-    
+  background-color: #FE6344;
+  color: #fff;
+  padding:0.5rem 1rem;
+  
 } */
 
 /* CSS */
 .action_btn {
+align-items: center;
+background-color:#FE6344;
+color: #fff;  
+border: none;
+outline: none;
+border-radius: 20px;
+font-size: 0.8rem;
+font-weight: bold;
+cursor: pointer;
+justify-content: flex-end;  
+padding: 0.5rem 1rem;
+/* margin-right: -120px; */
+}
+
+.action_btn:hover,.action_btn:focus { 
+  scale: 1.05;
+  background-color: #7428DB;
+  color: #ffffff;
+}
+/* Media query pour les petits écrans d'ordinateur (1024px à 1279px) */
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+  .navbar .logo a {
+    display: block; /* Afficher le logo */
+  }
+}
+
+/* Media query pour les tablettes (768px à 1023px) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .navbar .logo a {
+    display: block;
+    margin-left: 20px; /* Ajoutez la marge à gauche désirée pour le logo */
+  }
+  .navbar .links {
+    display: none;
+  }
+
+  .burger-menu {
+    margin: 30px; /* Ajoutez la marge à gauche désirée pour le burger-menu */
+    display: block;
+    font-size: 24px; /* Ajoutez la taille de police appropriée pour le bouton de bascule */
+    cursor: pointer;
+  }
+
+  .action_btn {
+    margin: auto;
+    text-align: center; /* Centrez le bouton */
+  }
+
+  .links.active {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 87px;
+    left: 0;
+    background-color: #F7D101;
+    text-align: center;
+    z-index: 999;
+  }
+}
+
+/* Media query pour les écrans mobiles (jusqu'à 767px) */
+@media screen and (max-width: 767px) {
+  .navbar .logo a {
+    display: block;
+    margin-left: 30px; /* Ajoutez la marge à gauche désirée pour le logo */
+  }
+
+  .navbar .links {
+    display: none;
+  }
+
+  header .navbar a.active {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  .burger-menu {
+    display: block;
+    margin: 30px; /* Ajoutez la marge à gauche désirée pour le burger-menu */
+  }
+
+  .links.active {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 87px;
+    left: 0;
+    background-color: #F7D101;
+    text-align: center;
+    z-index: 999;
+  }
+  .action_btn1 {
+    margin-left: 100px ;
+    margin-bottom: -500px;
+   align-self: center; /* Centrez le bouton */
+  }
+    /* Ajoutez une marge et une bordure autour de l'élément cible */
+
+}
+/*Container :*/
+.home{
+  background: url(../img/headerv.png) no-repeat;
+  background-size: cover;
+  width: auto;
+  min-height: 100vh;  
+  margin-top:1px; 
+}
+/* .content{
+  background-color: #7428DB;
+} */
+.content{
+  display: flex;
+  flex-direction: column;
+}
+.content h2{
+  color: #000;
+    margin-left: 120px;
+    margin-top: 155px;
+    font-family: Krona One;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 1000;
+    margin: 335px 321p; 
+}
+.content h3{
+  color: #000;
+    margin-left: 180px;
+    margin-top: -150px;
+    font-family: Krona One;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 1000;
+    margin: 335px 321p; 
+}
+.content h4{
+  color: #000;
+    margin-left: 250px;
+    margin-top: 10px;
+    font-family: Krona One;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 1000;
+    margin: 335px 321p; 
+}
+.action_btn1{
+  background-color:#FE6344;
+  color: #fff;  
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  justify-content: flex-end;  
+  padding: 0.5rem 1rem;
+  width: fit-content;
+  margin-left: 450px;
+  margin-top: 100px;
+  /* margin-right: -120px; */
+  }
+  
+  .action_btn1:hover,.action1_btn:focus { 
+    scale: 1.05;
+    background-color: #7428DB;
+    color: #ffffff;
+  }
+ 
+  .vd{
+    z-index: 888;
+    text-align: center;
+}
+#openPopup {
+  text-align: center;
+    cursor: pointer;
+    background-color:#FE6344;
+     color: #fff;  
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-family: OCR A Std, monospace;
+    border: 2px solid #FE6344;
+    margin-top: 100px;
+    margin-right: 140px;
+
+  }
+  #openPopup:hover{
+    color:white;
+    background-color: #7428DB;
+    border: none;
+
+
+  }
+
+  #videoPopup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    z-index: 1;
+  }
+
+  #closePopup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: #fff;
+  }
+
+  #youtubeVideo {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #000;
+  }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .home {
+    /* Styles spécifiques pour les écrans mobiles */
+    background: url(../img/headerv.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: auto;
+    min-height: auto;
+    margin-top: 1px;
+  }
+   .content h2 {
+    font-size: 60px; /* Ajustez la taille de la police pour cette taille d'écran */
+    margin: 40px 0 10px; /* Ajustez la marge pour cette taille d'écran */
+  }
+
+  .content h3 {
+    font-size: 60px; /* Ajustez la taille de la police pour cette taille d'écran */
+    margin: -10px 0 10px; /* Ajustez la marge pour cette taille d'écran */
+  }
+
+  .content h4 {
+    font-size: 60px; /* Ajustez la taille de la police pour cette taille d'écran */
+    margin: 10px 0 10px; /* Ajustez la marge pour cette taille d'écran */
+  }
+
+  .action_btn1 {
+    font-size: 0.9rem; /* Ajustez la taille de la police pour cette taille d'écran */
+    padding: 0.8rem 1.5rem; /* Ajustez la taille du bouton pour cette taille d'écran */
+    margin-top: 30px;
+    text-align: center;
+    margin-left: 250px;
+  }
+}
+
+/* Media query pour les écrans mobiles (jusqu'à 767px) */
+@media screen and (max-width: 767px) {
+  .home {
+    /* Styles spécifiques pour les écrans mobiles */
+    background: url(../img/headerv.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: auto;
+    min-height: auto;
+    margin-top: 1px;
+  }
+  .content h2 {
+    margin-bottom: 28px;
+    font-size: 40px; 
+    margin: 20px 0 10px; 
+  }
+
+  .content h3 {
+    font-size: 40px; 
+    margin: -10px 0 10px; 
+  }
+
+  .content h4 {
+    font-size: 40px; /* Ajustez la taille de la police pour cette taille d'écran */
+    margin: 10px 0 10px; /* Ajustez la marge pour cette taille d'écran */
+  }
+
+  .action_btn1 {
+    font-size: 0.8rem; 
+    /* padding: 0.7rem 1.2rem;  */
+    margin-top: 20px; 
+    margin-bottom: 30px;
+    margin-left: 100px;
+    text-align: center;
+  }
+}
+.head1{
+  margin-top: 54px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+    font-family: Krona One;
+    font-size: 10px;
+    font-style: normal;
+}
+
+.head1 .heading{
+  color: #000;
+    font-family: Krona One;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 1000;
+  text-align: center;
+  margin-top: 54px;
+}
+.parag1{
+margin-top: 30px;
+  text-align: center;
+  color: #000;
+  font-family: Krona One;
+} 
+.choose{
+  background-color: #fff;
+  height: auto;
+}
+.box_container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+}
+
+.box {
+  margin-top: 10px;
+  text-align: center;
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+  padding: 3rem 2rem;
+  font-size: 20px; 
+}
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+  .head1 .heading {
+    font-size: 30px; 
+  }
+}
+
+/* Media query pour les tablettes (768px à 1023px) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .head1 .heading {
+    font-size: 20px; 
+  }
+  .box_container {
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 1rem;
+  }
+
+  .box {
+    font-size: 16px; 
+  }
+}
+@media screen and (max-width: 767px) {
+  .head1 .heading {
+    font-size: 18px; 
+  }
+  .box {
+    font-size: 14px; 
+  }
+  .box_container {
+    grid-template-columns: repeat(1, 1fr); 
+    gap: 1rem;
+  }
+
+}
+
+.Galerie {
+  width: auto;
+  height: 476px;
+  background-color: #FEF6F3;
+  display: flex; /* Utilisez flex pour mettre en page les éléments enfants */
+  align-items: center; /* Alignez les éléments verticalement au centre */
+}
+.heading_button{
+  width:750px ;
+  height:340px ;
+}
+.heading1{
+  display: flex;
+  justify-content: flex-start;
+  color: #000;
+  font-family: Koh Santepheap;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+ margin-left: 40px;
+}
+.heading_button {
+  display: flex;
+  flex-direction: column; /* Affiche les éléments en colonne */
+}
+.text_container {
+  margin-bottom: 10px; /* Ajoute un espace en bas du texte */
+}
+.button_container {
+  margin-left:40px;
+  margin-top: 120px; /* Aligne le bouton au début (en bas) du conteneur */
+}
+.action_btn1 {
   align-items: center;
   background-color:#FE6344;
   color: #fff;  
@@ -89,206 +491,100 @@ header .navbar a.active {
   cursor: pointer;
   justify-content: flex-end;  
   padding: 0.5rem 1rem;
-  /* margin-right: -120px; */
 }
-
-.action_btn:hover,.action_btn:focus { 
-    scale: 1.05;
+.action_btn1:hover,.action_btn:focus { 
+  scale: 1.05;
   background-color: #7428DB;
   color: #ffffff;
 }
-/* Styles for screens starting from 1280px wide */
-@media screen and (min-width: 1280px) {
-    .navbar {
-      height: 80px; /* Adjust height for large screens */
-    }
-    .navbar .logo a {
-      font-size: 2rem; /* Increase font size for large screens */
-    }
-  }
-  
-  /* Styles for screens between 1024px and 1279px wide */
-  @media screen and (min-width: 1024px) and (max-width: 1279px) {
-    .navbar .links {
-      gap: 1rem; /* Reduce the gap between links for medium screens */
-    }
-  }
-  
-  /* Styles for screens between 768px and 1023px wide (Tablet) */
-  @media screen and (min-width: 768px) and (max-width: 1023px) {
-    .navbar .logo a {
-      font-size: 1.5rem; /* Adjust font size for tablets */
-    }
-  }
-  
-  /* Styles for screens up to 767px wide (Mobile) */
-  @media screen and (max-width: 767px) {
-    .navbar {
-      flex-direction: column; /* Stack items vertically for mobile */
-      height: auto; /* Adjust height for mobile screens */
-    }
-    .navbar .logo a {
-      font-size: 1.2rem; /* Adjust font size for mobile screens */
-    }
-    .navbar .links {
-      flex-direction: column; /* Stack links vertically for mobile */
-      gap: 1rem; /* Reduce gap for mobile screens */
-    }
-    .action_btn {
-      margin-top: 10px; /* Add space between the button and links on mobile */
-    }
-  }
-  
-/*Container :*/
-
-
-.home{
-    background: url(../img/jj.jpg) no-repeat;
-    background-size: cover;
-    width: auto;
-    min-height: 80vh;  
-    margin-top:1px; 
+.box_container_img {
+  flex: 1; /* Pour que la boîte occupe l'espace disponible */
+  display: flex;
+  flex-wrap: wrap; /* Permet de passer à la ligne si nécessaire */
+  justify-content: flex-end; /* Alignez les éléments à droite */
+  gap: 10px; /* Ajoutez un espace entre les éléments */
 }
-/* .content{
-    background-color: #7428DB;
-} */
-.home h3{
-    color: #000;
-     text-align: center;
-    font-family: Krona One;
+
+.box_img {
+  width: calc(50% - 5px); /* Pour deux images par ligne avec un espace entre elles */
+}
+/* Media query pour les écrans de taille moyenne (1024px à 1279px) */
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+  .Galerie {
+    height: 400px;
+  }
+  .heading1 {
     font-size: 40px;
-    font-style: normal;
-    font-weight: bold;
-    margin: 335px 321p; 
+  }
+  /* Ajoutez d'autres styles spécifiques pour cette taille d'écran si nécessaire */
 }
 
-/* .cercle{
-    margin-left: 294px;
-    justify-content: center;
-    align-items: center;
-    margin-top: 25px;
-    width: 1056px;
-    height: 550px;
-    border-radius: 50%;
-    background: #FE6344;
-}
-.image{
-    margin-left: -50px;
-    justify-content: center;
-    margin-bottom: 80px;
-    justify-content: center;
-} */
-/* .choose{
-    width: auto;
-    min-height: 60vh; 
-    background-color: #7428DB;
-} */
-.head1{
-    margin-top: 54px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-/* .head1 .heading{
-    text-align: center;
-    margin-top: 54px;
-}*/
-.parag1{
-  margin-top: 30px;
-    text-align: center;
-} 
-.choose{
-    background-color: #fff;
-    .box_container{
-        display: grid;
-        grid-template-columns: repeat(4,1fr);
-        gap: 3rem;
-        
-    }
-    .box{
-        margin-top: 50px;
-        text-align: center;
-        border: none;
-        background-color: #fff;
-        cursor: pointer;
-        padding: 3rem 2rem;
-    }
-}
-@media (min-width: 768px){
-    .heading{
-        font-size: 3rem;
-    }
-}
-.Galerie {
-    width: auto;
-    height: 476px;
-    background-color: red;
-    display: flex; /* Utilisez flex pour mettre en page les éléments enfants */
-    align-items: center; /* Alignez les éléments verticalement au centre */
+/* Media query pour les tablettes (768px à 1023px) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .Galerie {
+    height: 400px;
+  }
+  .heading1 {
+    font-size: 30px;
   }
   .heading_button{
-    width:850px ;
+    width:290px ;
     height:340px ;
-    background-color: aqua;
   }
-  .heading1{
-    display: flex;
-    justify-content: flex-start;
-    color: #000;
-    font-family: Koh Santepheap;
-    font-size: 60px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-   margin-left: 40px;
+  /* Ajustez la largeur maximale des images pour les tablettes */
+  .box_img img {
+    max-width: 100%; /* Vous pouvez ajuster cette valeur en fonction de vos besoins */
   }
-  .heading_button {
-    display: flex;
-    flex-direction: column; /* Affiche les éléments en colonne */
-}
-.text_container {
-    margin-bottom: 10px; /* Ajoute un espace en bas du texte */
-}
-.button_container {
-    margin-left:40px;
-    margin-top: 120px; /* Aligne le bouton au début (en bas) du conteneur */
-}
   .action_btn1 {
-    align-items: center;
-    background-color:#FE6344;
-    color: #fff;  
-    border: none;
-    outline: none;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: bold;
-    cursor: pointer;
-    justify-content: flex-end;  
-    padding: 0.5rem 1rem;
+    margin-left: 20px; /* Placez le bouton en bas */
   }
-  .action_btn1:hover,.action_btn:focus { 
-    scale: 1.05;
-    background-color: #7428DB;
-    color: #ffffff;
+  /* Ajoutez d'autres styles spécifiques pour cette taille d'écran si nécessaire */
 }
-  .box_container_img {
-    flex: 1; /* Pour que la boîte occupe l'espace disponible */
-    display: flex;
-    flex-wrap: wrap; /* Permet de passer à la ligne si nécessaire */
-    justify-content: flex-end; /* Alignez les éléments à droite */
-    gap: 10px; /* Ajoutez un espace entre les éléments */
+
+@media (max-width: 767px) {
+
+  .Galerie {
+    height: 400px;
   }
-  
-  .box_img {
-    width: calc(50% - 5px); /* Pour deux images par ligne avec un espace entre elles */
+  .heading1 {
+    margin-top: 50px;
+    font-size: 30px;
   }
- 
+  .heading_button{
+    width:230px ;
+    height:340px ;
+  }
+  /* Ajustez la largeur maximale des images pour les tablettes */
+  .box_img img {
+    height:100px;
+    max-width: 100%; /* Vous pouvez ajuster cette valeur en fonction de vos besoins */
+  }
+  .action_btn1 {
+    margin-left: 20px; /* Placez le bouton en bas */
+  }
+}
+
+
+
+
+.container_service{
+  background-color: #fff;
+ }
 .package_container{
   width: 100%;
 }
-
+.toogle .annee{
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 1000;
+  color: #31C75B;
+}
+.toogle .month{
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 1000;
+  color: #7DB0DE;
+}
 .packages{
     margin: 40px;
     padding: 40px 40px 100px;
@@ -425,6 +721,8 @@ input:checked + .slider:before{
     border-radius: 50%;
 }
 
+/*client review: */
+
 .container_client{
   display: flex;
   justify-content: center;
@@ -432,7 +730,7 @@ input:checked + .slider:before{
   flex-direction: column; 
   width: auto;
   height: auto;
-  background-color: #7DB0DE;
+  background-color: #FEF6F3;
 }
 .heading2{
   letter-spacing: 1px;
@@ -466,7 +764,7 @@ input:checked + .slider:before{
 .client_box{
   width: 550px;
   box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
-  background-color: #e9f0eb;
+  background-color: #fff;
   padding: 20px;
   margin: 15px;
  transform: translateY(-30px);
@@ -540,13 +838,20 @@ input:checked + .slider:before{
   color: #e9f0eb;
   background-color: #000;
 }
- .faq{
+.faq{
   width: auto;
   height: 700px;
-  background: #31C75B;
+  background: #fff;
   margin-top:-30px;
 } 
-
+.heading2{
+  font-size: 2.2rem ;
+  font-weight: bold;
+  color: #202020;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
 .faq .contentBx{
   margin-bottom: 400px;
   position: relative;
@@ -558,7 +863,7 @@ input:checked + .slider:before{
   margin-right: 50px;
   width: 80%;
   font-family: Koh Santepheap;
-  font-size: 33px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -647,26 +952,131 @@ input:checked + .slider:before{
   }
 }
 
-/* Styles pour les mobiles (jusqu'à 767px) */
 @media (max-width: 767px) {
+  .heading2{
+    font-size: 1rem;
+    text-align: center;
+  }
   .faq .contentBx {
     margin: 10px 20px 28px;
   }
 
   .faq .contentBx .label1 {
     margin-left: 20px;
-    margin-right: 10px;
+    margin-right: 20px;
     width: 100%;
+    text-align: center;
   }
 
   .faq .contentBx .content {
-    margin-left: 20px;
+    margin-left: 0; 
     margin-right: 10px;
   }
 }
-/* 
-footer{ 
-    padding: 40px 0;
-    background: #7428DB;
-} */
+footer{
+  background-color: #111;
 
+}
+.footerContainer{
+  width: 100%;
+  height: 244px;
+  padding: 30px 30px 20px;
+}
+
+.footer_social{
+  display: flex;
+  justify-content: center;
+}
+
+.footer_social a{
+    padding: 10px;
+    background-color: white;
+    border-radius: 20pc;
+    margin: 10px;
+ 
+}
+.footer_social a i{
+    font-size: 2em;
+    color: #000;
+    opacity: 0.9;
+}
+.footerNav{
+  margin: 30px 0;
+}
+
+.footerNav ul{
+  display: flex;
+  justify-content: center;
+}
+
+.footerNav ul li a{
+  color: #fff;
+  margin: 20px;
+  font-size: 1.3rem;
+  opacity: 0.7;
+  transition:0.5s ;
+}
+.footerNav ul li a:hover{
+  opacity: 1;
+}
+.footerNav ul li a.active{
+  color: #FE6344;
+  font-weight: bold;
+  border-bottom: 2px solid #FE6344;
+  padding-bottom: 5px; /* Add some padding at the bottom */
+}
+.footerBottom{
+  padding-bottom: 20px;
+}
+.footerBottom p{
+  text-align: center;
+  color: #fff;
+  margin: 20px;
+  font-size: 1.3rem;
+
+}
+.designer{
+  color: #FE6344;
+  letter-spacing: 1px;
+  font-weight: 400;
+  margin: 0px 5px;
+}
+/* Styles pour les écrans de grande taille */
+@media (min-width: 1280px) {
+  .footerContainer {
+    padding: 30px;
+  }
+}
+
+/* Styles pour les écrans de taille moyenne (petit écran d'ordinateur) */
+@media (max-width: 1279px) {
+  .footerContainer {
+    padding: 20px;
+  }
+}
+
+/* Styles pour les tablettes */
+@media (max-width: 1023px) {
+  .footerContainer {
+    padding: 10px;
+  }
+}
+
+/* Styles pour les écrans mobiles */
+@media (max-width: 767px) {
+  .footerContainer {
+    padding: 5px;
+  }
+  .footer_social {
+    justify-content: center;
+  }
+  .footer_social a {
+    margin: 5px;
+  }
+  .footer_social a i {
+    font-size: 1em;
+  }
+  .footerNav ul li {
+    margin: -12px;
+  }
+}

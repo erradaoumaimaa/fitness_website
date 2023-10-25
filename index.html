@@ -16,169 +16,205 @@
     <!-- <link rel="icon" href="./img/favicon/favicon.ico" type="image/x-icon"> -->
 </head>
 <body>
-    <!-- start navbar-->
-    <header>
-        <div class="navbar">
-        <div class="logo">
-            <a href="index.html"> FITPRO </a>
-        </div>
-        <ul class="links">
-            <li><a class="active" href="index.html">Home</a></li>
-            <li><a href="gelerie.html">Galerie</a></li>
-            <li><a href="programs.html">Programs</a></li>
-        </ul>
-        <a href="index.html" class="action_btn">Get Started</a>
-        <!-- <div class="toggle_btn">
-            <i class="fa-solid fa-bars" style="color: #00060f;"></i>
-        </div>   -->
-    </div>
-    </header>
+            <!-- start navbar-->
+            <header>
+                <div class="navbar">
+                    <div class="logo">
+                        <a href="index.html" class="icon-link">
+                            FIT <!-- <img src="./img/favicon/Muscle.png" alt="Muscle Icon"> -->PRO 
+                          </a>
+                    </div>
+                    <ul class="links">
+                        <li><a class="active"  href="index.html">Home</a></li>
+                        <li><a  href="gelerie.html">Galerie</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                    </ul>
+                    <a href="index.html" class="action_btn">Get Started</a>
+                    <div class="burger-menu">&#9776;</div>
+                    <!-- <div class="toggle_btn">
+                        <i class="fa-solid fa-bars" style="color: #00060f;"></i>
+                    </div>   -->
+                 </div>
+            </header>
+              <!--end navbar-->
+        <script>
+                const burgerMenu = document.querySelector('.burger-menu');
+                    const navLinks = document.querySelector('.links');
     
-    <!--end navbar-->
-
+                    burgerMenu.addEventListener('click', () => {
+                        navLinks.classList.toggle('active');
+    });
+            </script>
+   <!--Header Section-->
     <!--start main-->
-    <div class="home">
-       <div class="content">
-            <h3>Never Give Up On Your Dreams </h3>
-            <div class="cercle">
-                <img  class="image"  src="img/yy.png" alt="gym">
-          </div>
-        </div> 
-    </div>
-
-    <!--end main-->
-    <!--Why Choose Us-->
-    <div class="choose">
+    <div class="home"> 
+        <div class="content">
+             <h2> Never<h2> 
+                <h3>Give Up On</h3> 
+                <h4>Your Dreams </h4>
+             <div class="vd">
+               <a href="#"id="openPopup" class="action_btn1"> Watch Us !</a> 
+                <div id="videoPopup">
+                  <div id="closePopup">Fermer</div>
+                  <iframe id="youtubeVideo" width="560" height="315" src="https://www.youtube.com/embed/n6SS9z3077Q?si=tdK0_qsRB_gGDIdl"  frameborder="0" allowfullscreen></iframe>
+             
+              </div>
+            </div>
+        </div>
+    </div> 
+    <script>
+        const openPopup = document.getElementById("openPopup");
+        const videoPopup = document.getElementById("videoPopup");
+        const closePopup = document.getElementById("closePopup");
+        const youtubeVideo = document.getElementById("youtubeVideo");
+    
+        openPopup.addEventListener("click", function () {
+        videoPopup.style.display = "block";
+        });
+    
+        closePopup.addEventListener("click", function () {
+        videoPopup.style.display = "none";
+        });
+    
+        window.addEventListener("click", function (event) {
+        if (event.target === videoPopup) {
+            videoPopup.style.display = "none";
+    }
+    });
+    </script> 
+ <!--end main-->
+     <!--Why Choose Us-->
+     <div class="choose">
         <div class="head1">
              <h3 class="heading">Why Choose Us</h3>
-            <p class="parag1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit ipsa quis molestiae ex eligendi ad nostrum corrupti! Quidem optio quo voluptates</p>
+            <p class="parag1">At PureGym you get way more than you pay for! You can enjoy flexible memberships, unlimited classes and 24/7 access, but it's not just the stuff you'd expect from a gym, it's the extra value too. Think new friends, way more you time, friendly teams and a judgement-free space to workout and feel-good in. No wonder we're the UK's favourite gym.</p>
         </div>
         <div class="box_container">
             <div class="box">
                 <img class="icon"  src="img/icon1.png" alt="">
-                <h3>lorem ipsum1</h3>
+                <h3>FREE CONSULTATION</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
             </div>
             <div class="box">
                 <img class="icon"  src="img/icon2.png" alt="">
-                <h3>lorem ipsum2</h3>
+                <h3>EXCELLENT SERVICE</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
             </div>
             <div class="box">
                 <img  class="icon"  src="img/icon3.png" alt="">
-                <h3>lorem ipsum3</h3>
+                <h3>BEST TRAINERS</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
             </div>
             <div class="box">
                 <img  class="icon" src="img/icon4.png" alt="">
-                <h3>lorem ipsum4</h3>
+                <h3>WORK PROGRAMS</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
             </div>
         </div>
     </div> 
-
-    <!--end Why Choose Us-->
-    <!--Our Gelerie-->
-        <div class="Galerie">
-            <div class="heading_button">
-                <div class="text_container">
-                    <h3 class="heading1">Explore <br> our fitness club</h3>
-                </div>
-                <div class="button_container">
-                    <a href="galerie.html" class="action_btn1">View All Galerie</a>
-                </div>
+  <!--end Why Choose Us-->
+     <!--Our Gelerie-->
+     <div class="Galerie">
+        <div class="heading_button">
+            <div class="text_container">
+                <h3 class="heading1">Explore <br> our fitness club</h3>
             </div>
-            <div class="box_container_img">
-                <div class="box_img">
-                <img src="img/img1.png" alt="" width="327" height="160">
-                </div>
-                <div class="box_img">
-                <img src="img/img2.png" alt="" width="327" height="160">
-                </div>
-                 <div class="box_img">
-                <img src="img/img3.png" alt="" width="327" height="160">
-                </div>
-                <div class="box_img">
-                    <img src="img/img4.png" alt="" width="327" height="160">
-                    </div> 
-            </div>
-           
-        </div>
-    <!--end Our Gelerie-->
-    <!--Our Services-->
-        <div class="container_service">
-            <div class="top">
-                <div class="toogle">
-                    <span style="margin: 0.8em;">Annually</span>
-                    <label class="switch">
-                        <input type="checkbox" id="checkbox" onclick="check()">
-                        <span class="slider round"></span>
-                    </label>
-                    <span style="margin: 0.8em;">Monthly</span>
-                </div>
-            </div>
-            <div class="package_container">
-                <div class="packages">
-                     <h1 class="first">Basic</h1>
-                     <h2 class="text1">&dollar;9.99</h2>
-                     <h2 class="text2">&dollar;119.99</h2>
-                     <ul class="list">
-                        <li>2000 Subscribers</li>
-                        <li>12,000 Emails/month</li>
-                        <li>Multi-User Accounts</li>
-                        <li>Email Support</li>
-                     </ul>
-                     <a href="register.html" class="button">Start Now</a>
-                </div>
-                <div class="packages">
-                    <h1 class="first">Professional</h1>
-                    <h2 class="text1">&dollar;19.99</h2>
-                    <h2 class="text2">&dollar;239.99</h2>
-                    <ul class="list">
-                       <li>Basic +</li>
-                       <li>Landing Pages</li>
-                       <li>Multi-User Accounts</li>
-                       <li>Email Support</li>
-                    </ul>
-                    <a href="register.html" class="button">Start Now</a>
-               </div>
-               <div class="packages">
-                <h1 class="first">Master</h1>
-                <h2 class="text1">&dollar;29.99</h2>
-                <h2 class="text2">&dollar;359.99</h2>
-                <ul class="list">
-                   <li>2000 Subscribers</li>
-                   <li>12,000 Emails/month</li>
-                   <li>Multi-User Accounts</li>
-                   <li>Email Support</li>
-                </ul>
-                <a href="register.html" class="button">Start Now</a>
-           </div>
+            <div class="button_container">
+                <a href="galerie.html" class="action_btn1">View All Galerie</a>
             </div>
         </div>
+        <div class="box_container_img">
+            <div class="box_img">
+            <img src="img/img1.png" alt="" width="327" height="160">
+            </div>
+            <div class="box_img">
+            <img src="img/img2.png" alt="" width="327" height="160">
+            </div>
+             <div class="box_img">
+            <img src="img/img3.png" alt="" width="327" height="160">
+            </div>
+            <div class="box_img">
+                <img src="img/img4.png" alt="" width="327" height="160">
+                </div> 
+        </div>
+       
+    </div>
+<!--end Our Gelerie-->
+     <!--Our Services-->
+     <div class="container_service">
+                    <div class="top">
+                            <div class="toogle">
+                                <span class="annee" style="margin: 0.8em;">Annually</span>
+                                <label class="switch">
+                                    <input type="checkbox" id="checkbox" onclick="check()">
+                                    <span class="slider round"></span>
+                                </label>
+                                <span class="month" style="margin: 0.8em;">Monthly</span>
+                            </div>
+                    </div>
+                    <div class="package_container">
+                        <div class="packages">
+                            <h1 class="first">Basic</h1>
+                            <h2 class="text1">&dollar;9.99</h2>
+                            <h2 class="text2">&dollar;119.99</h2>
+                            <ul class="list">
+                                <li>Weekly Email Checkins</li>
+                                <li>No contract necessary, 30 days cancellation notice required.</li>
+                                <li>Multi-User Accounts</li>
+                                <li>Email Support</li>
+                            </ul>
+                            <a href="register.html" class="button">Start Now</a>
+                        </div>
+                        <div class="packages">
+                            <h1 class="first">Professional</h1>
+                            <h2 class="text1">&dollar;19.99</h2>
+                            <h2 class="text2">&dollar;239.99</h2>
+                            <ul class="list">
+                            <li>Food Log Evaluation</li>
+                            <li>Unlimited Group Classes</li>
+                            <li>Goal Assessment</li>
+                            <li>Goal–Specific Coaching in Group Classes</li>
+                            </ul>
+                            <a href="register.html" class="button">Start Now</a>
+                    </div>
+                    <div class="packages">
+                        <h1 class="first">Master</h1>
+                        <h2 class="text1">&dollar;29.99</h2>
+                        <h2 class="text2">&dollar;359.99</h2>
+                        <ul class="list">
+                        <li>Participate in as many Class Sessions as you want.</li>
+                        <li>Weekly Email Check–ins</li>
+                        <li>MGoal–Specific Coaching in Group Classes</li>
+                        <li>One or Two Personal Training Sessions per Month</li>
+                        </ul>
+                        <a href="register.html" class="button">Start Now</a>
+                </div>
+            </div>
+    </div>
 
-        <script>
-            function check(){
-                var checkBox=document.getElementById("checkbox");
-                var text1=document.getElementsByClassName("text1");
-                var text2=document.getElementsByClassName("text2");
 
-                for(var i=0; i < text1.length;i++){
-                    if(checkBox.checked==true){
-                       text1[i].style.display="block";
-                        text2[i].style.display="none"; 
-                    }else if(checkBox.checked==false){
-                        text1[i].style.display="none";
-                        text2[i].style.display="block"; 
-                    }
-                        
-                }
+<script>
+    function check(){
+        var checkBox=document.getElementById("checkbox");
+        var text1=document.getElementsByClassName("text1");
+        var text2=document.getElementsByClassName("text2");
+
+        for(var i=0; i < text1.length;i++){
+            if(checkBox.checked==true){
+               text1[i].style.display="block";
+                text2[i].style.display="none"; 
+            }else if(checkBox.checked==false){
+                text1[i].style.display="none";
+                text2[i].style.display="block"; 
             }
-            check()
-        </script>
-    <!--end Our Services-->
+                
+        }
+    }
+    check()
+</script>
+<!--end Our Services-->
  <!--Our Client-->
-
+ 
  <div class="container_client">
     <div class="heading2">
         <h3 >Clients Says</h3>
@@ -191,12 +227,12 @@
                 <div class="profile">
                     <!-- Image -->
                     <div class="profile_img">
-                        <img src="./img/img1.png" alt="">
+                        <img src="./img/صورة.jpeg" alt="">
                     </div>
                     <!-- Name & Username --> 
                     <div class="name_user">
-                        <strong>Lorem Ipsum</strong>
-                        <span>@LoremIpsum</span>
+                        <strong>Jack</strong>
+                        <span>December 31, 2023</span>
                     </div>
                 </div>
                 <!-- Reviews -->
@@ -221,12 +257,12 @@
                 <div class="profile">
                     <!-- Image -->
                     <div class="profile_img">
-                        <img src="./img/img1.png" alt="">
+                        <img src="./img/Senior Pictures are for Guys _ Raleigh Senior Pictures - Cari Long Photography.jpeg" alt="">
                     </div>
                     <!-- Name & Username --> 
                     <div class="name_user">
-                        <strong>Lorem Ipsum</strong>
-                        <span>@LoremIpsum</span>
+                        <strong>James</strong>
+                        <span>Juin 25, 2023</span>
                     </div>
                 </div>
                 <!-- Reviews -->
@@ -249,12 +285,12 @@
                 <div class="profile">
                     <!-- Image -->
                     <div class="profile_img">
-                        <img src="./img/img1.png" alt="">
+                        <img src="./img/pexels-ceutth-15788298.jpg" alt="">
                     </div>
                     <!-- Name & Username --> 
                     <div class="name_user">
-                        <strong>Lorem Ipsum</strong>
-                        <span>@LoremIpsum</span>
+                        <strong>William</strong>
+                        <span>Juillet 1, 2023</span>
                     </div>
                 </div>
                 <!-- Reviews -->
@@ -277,12 +313,12 @@
                 <div class="profile">
                     <!-- Image -->
                     <div class="profile_img">
-                        <img src="./img/img1.png" alt="">
+                        <img src="./img/See Hot Pics of Zac Efron!.jpeg" alt="">
                     </div>
                     <!-- Name & Username --> 
                     <div class="name_user">
-                        <strong>Lorem Ipsum</strong>
-                        <span>@LoremIpsum</span>
+                        <strong>Locas</strong>
+                        <span>Octobre 8, 2023</span>
                     </div>
                 </div>
                 <!-- Reviews -->
@@ -303,81 +339,79 @@
 </div>
     
     <!--end Our Client-->
-    <!--FAQs-->
-    <div class="faq">
-        <div class="heading2">
-            <h3 >Frequently asked questions</h3>
+  <!--FAQs-->
+  <div class="faq">
+    <div class="heading2">
+        <h3 >Frequently asked questions</h3>
+    </div>
+    <div class="contentBx">
+        <div class="label1">
+            How do I enter the gym?
         </div>
-        <div class="contentBx">
-            <div class="label1">
-                How do I enter the gym?
-            </div>
-            <div class="content">
-                <p>If it’s your first time to Our Gym, speak to one of our
-                    friendly reception team and they’ll give you an entry fob. 
-                    You can then use the entry fob to access
-                    Our Gym during opening hours.</p>
-            </div>
-        </div>
-        <div class="contentBx">
-            <div class="label1">
-                How do I cancel a class booking?
-            </div>
-            <div class="content">
-                <p>Just log on to your account, go to class bookings,
-                    and click cancel.</p>
-            </div>
-        </div>
-        <div class="contentBx">
-            <div class="label1">
-                Where can I shower?
-            </div>
-            <div class="content">
-                <p>We have free showers available in our changing rooms on the ground floor.</p>
-            </div>
-        </div>
-        <div class="contentBx">
-            <div class="label1">
-                Do I get anything for referring a friend or family member?
-            </div>
-            <div class="content">
-                <p>If a friend or family member join as a result of you referring them then you get a FREE 30-minute Personal Training session. It’s easy to set up, all you have to do is get your friends/family to enter your referral code (this can be found on the left hand side of your Membr account under your profile picture) when they sign up to join Our Gym.</p>
-            </div>
-        </div>
-        <div class="contentBx">
-            <div class="label1">
-                Can I park my car for free?
-            </div>
-            <div class="content">
-                <p>Yes, it is free of charge for up to 3 hours. Unfortunately if you stay longer than 3 hours, you may receive a parking ticket.</p>
-            </div>
-        </div>
-        <div class="contentBx">
-            <div class="label1">
-                How do I use a discount/promotion?
-            </div>
-            <div class="content">
-                <p>Promo codes can be entered when you join online, just after you have selected your membership type, and before you enter your personal details.</p>
-            </div>
+        <div class="content">
+            <p>If it’s your first time to Our Gym, speak to one of our
+                friendly reception team and they’ll give you an entry fob. 
+                You can then use the entry fob to access
+                Our Gym during opening hours.</p>
         </div>
     </div>
-    <script>
-         const f=document.getElementsByClassName('contentBx');
-        for(i=0;i<f.length;i++) {
-            f[i].addEventListener('click',function(){
-                this.classList.toggle('active')
-            })
-        }
-    </script>
-    <!--end FAQs-->
-    <!-- <footer>
+    <div class="contentBx">
+        <div class="label1">
+            How do I cancel a class booking?
+        </div>
+        <div class="content">
+            <p>Just log on to your account, go to class bookings,
+                and click cancel.</p>
+        </div>
+    </div>
+    <div class="contentBx">
+        <div class="label1">
+            Where can I shower?
+        </div>
+        <div class="content">
+            <p>We have free showers available in our changing rooms on the ground floor.</p>
+        </div>
+    </div>
+   
+    <div class="contentBx">
+        <div class="label1">
+            Can I park my car for free?
+        </div>
+        <div class="content">
+            <p>Yes, it is free of charge for up to 3 hours. Unfortunately if you stay longer than 3 hours, you may receive a parking ticket.</p>
+        </div>
+    </div>
+    
+</div>
+<script>
+     const f=document.getElementsByClassName('contentBx');
+    for(i=0;i<f.length;i++) {
+        f[i].addEventListener('click',function(){
+            this.classList.toggle('active')
+        })
+    }
+</script>
+<!--end FAQs-->
+<footer>
+    <div class="footerContainer">
         <div class="footer_social">
-            <a class="icon" href="https://www.instagram.com/fitpro_/" >  <i class="fab fa-instagram"></i></a>-->
-            <!-- <a class="icon" href="https://www.facebook.com/Fitpro-10090909090909/" ><i class="fab fa-facebook-f"></i></a> -->
-            <!-- <a class="icon" href="https://www.twitter.com/fitpro_/" ><i class="fab fa-twitter"></i></a> -->
-            <!-- <a class="icon" href="https://www.twitter.com/fitpro_/" ><i class="fab fa-twitter"></i></a> -->
-
-        
-    </footer> 
+            <a class="icon" href="https://www.instagram.com/fitpro_/" > <i class="fa-brands fa-square-instagram" style="color: #00040a;"></i></a>
+            <a class="icon" href="https://www.facebook.com/Fitpro-10090909090909/" ><i class="fa-brands fa-facebook"></i></a> 
+            <a class="icon" href="https://www.twitter.com/fitpro_/" ><i class="fa-brands  fa-twitter"></i></a> 
+            <a class="icon" href="https://www.youtub.com/fitpro_/" ><i class="fa-brands fa-youtube" style="color: #000000;"></i></a> 
+        </div>
+        <div class="footerNav">
+            <ul>
+                <li><a class="active"  href="index.html">Home</a></li>
+                <li><a href="gelerie.html">Galerie</a></li>
+                <li><a href="programs.html">Programs</a></li>
+                <li><a href="register.html">Subscribe</a></li>
+            </ul>
+        </div>
+        <div class="footerBottom">
+            <p>Copyright &copy;2023; Designed by <span class="designer">ER-RADA OUMAIMA</span></p>
+        </div> 
+    </div>    
+</footer> 
 </body>
 </html>

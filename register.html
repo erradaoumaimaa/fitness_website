@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/register_style.css">
+    <!--import font google -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!-- Import the icon library CSS -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <!-- Import the icon fontAwesome -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Import the icon library CSS -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <!-- Import the icon fontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--l'icône s'affiche dans la barre de titre du navigateur à côté du texte du titre https://favicon.io/ -->
+    <title>FITPRO</title>
+    <link rel="shortcut icon" href="./img/jj.jpg" > 
+    <!-- <link rel="icon" href="./img/favicon/favicon.ico" type="image/x-icon"> -->
+    <script  src="./js/register.js" defer></script>
+</head>
+<body>
+        <!-- start navbar-->
+        <header>
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html" class="icon-link">
+                        FIT <!-- <img src="./img/favicon/Muscle.png" alt="Muscle Icon"> -->PRO 
+                      </a>
+                </div>
+                <ul class="links">
+                    <li><a  href="index.html">Home</a></li>
+                    <li><a  href="gelerie.html">Galerie</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                </ul>
+                <a href="index.html" class="action_btn">Get Started</a>
+                <div class="burger-menu">&#9776;</div>
+                <!-- <div class="toggle_btn">
+                    <i class="fa-solid fa-bars" style="color: #00060f;"></i>
+                </div>   -->
+             </div>
+        </header>
+          <!--end navbar-->
+    <script>
+            const burgerMenu = document.querySelector('.burger-menu');
+                const navLinks = document.querySelector('.links');
+
+                burgerMenu.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+});
+        </script>
+        <!--end navbar-->
+        <div class="register_container">
+            <div class="register">
+                <form id="form" action="" autocomplete="off">
+                    <h1>SubScribe Now!</h1>
+                    <div class="input_box">
+                        <div class="input_field">
+                            <input type="text" id="full-name" placeholder="Full Name">
+                            <i class='bx bxs-user'></i>
+                            <div class="error"></div>
+                            <span class="error-message">Le nom doit comporter au moins 3 caractères.</span>
+                            <span class="success-message">Nom valide !</span>
+                        </div>
+                        <div class="input_field">
+                            <input type="text" id="username" placeholder="Username">
+                            <i class='bx bxs-user'></i>
+                            <div class="error"></div>
+                            <span class="error-message">Message d'erreur pour le nom d'utilisateur.</span>
+                            <span class="success-message">Message de succès pour le nom d'utilisateur.</span>
+                        </div>
+                    </div>
+                    <div class="input_box">
+                        <div class="input_field">
+                            <input type="email" id="email" placeholder="Email">
+                            <i class='bx bxs-envelope' undefined></i>
+                            <div class="error"></div>
+                            <span class="error-message">Message d'erreur pour l'e-mail.</span>
+                            <span class="success-message">Message de succès pour l'e-mail.</span>
+                        </div>
+                        <div class="input_field">
+                            <input type="text" id="cin" placeholder="CIN">
+                            <i class='bx bxs-user'></i>
+                            <div class="error"></div>
+                            <span class="error-message">Le CIN doit comporter 2 lettres suivies de 6 chiffres.</span>
+                            <span class="success-message">CIN valide !</span>
+                        </div>
+                    </div>
+                    <div class="input_box">
+                        <div class="input_field">
+                            <input type="tel" id="phone-number" placeholder="Phone Number">
+                            <i class='bx bxs-phone'></i>
+                            <div class="error"></div>
+                            <span class="error-message">Message d'erreur pour le numéro de téléphone.</span>
+                            <span class="success-message">Message de succès pour le numéro de téléphone.</span>
+                        </div>
+                        <div class="input_field">
+                            <input type="text" id="pack-name" placeholder="Name of the Pack">
+                            <i class='bx bxs-user'></i>
+                            <div class="error"></div>
+                            <span class="error-message">Message d'erreur pour le nom du pack.</span>
+                            <span class="success-message">Message de succès pour le nom du pack.</span>
+                        </div>
+                    </div>
+                    <label><input type="checkbox"> I hereby declare that the above information</label>
+                    <button type="submit" class="btn">Register</button>
+                </form>
+            </div>
+        </div>
+        
+        <footer>
+            <div class="footerContainer">
+                <div class="footer_social">
+                    <a class="icon" href="https://www.instagram.com/fitpro_/" > <i class="fa-brands fa-square-instagram" style="color: #00040a;"></i></a>
+                    <a class="icon" href="https://www.facebook.com/Fitpro-10090909090909/" ><i class="fa-brands fa-facebook"></i></a> 
+                    <a class="icon" href="https://www.twitter.com/fitpro_/" ><i class="fa-brands  fa-twitter"></i></a> 
+                    <a class="icon" href="https://www.youtub.com/fitpro_/" ><i class="fa-brands fa-youtube" style="color: #000000;"></i></a> 
+                </div>
+                <div class="footerNav">
+                    <ul>
+                        <li><a  href="index.html">Home</a></li>
+                        <li><a href="gelerie.html">Galerie</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="register.html">Subscribe</a></li>
+                    </ul>
+                </div>
+                <div class="footerBottom">
+                    <p>Copyright &copy;2023; Designed by <span class="designer">ER-RADA OUMAIMA</span></p>
+                </div> 
+            </div>    
+        </footer> 
+</body>
+</html>

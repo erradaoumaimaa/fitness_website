@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Sanchez&family=Young+Serif&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'open Sans', sans-serif;
+    font-family: CerebriSans, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+    font-size: 18px;
+    /* font-family: ; */
+}
+body{
+    background-color: #FEF6F3;
+}
+header {
+  display: fixed;
+  height: auto;
+  margin-top: -1px;
+  background-color: #fff;
+  padding: 0;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.navbar {
+  width: 100%;
+  height: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #0B0A0A;
+  font-size: 1rem;
+}
+a:hover {
+  color: #FE6344;
+}
+.navbar .logo a{
+  /* margin-left: -120px; */
+   font-size: 1.5rem;
+   font-weight: bold;
+
+
+
+  }
+
+  .navbar .links{
+  display: flex;
+  gap: 2rem;
+}
+header .navbar a.active {
+  color: #FE6344;
+  font-weight: bold;
+  border-bottom: 2px solid #FE6344;
+  padding-bottom: 5px; /* Add some padding at the bottom */
+}
+.burger-menu {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+/* 
+.action_btn{
+  background-color: #FE6344;
+  color: #fff;
+  padding:0.5rem 1rem;
+  
+} */
+
+/* CSS */
+.action_btn {
+align-items: center;
+background-color:#FE6344;
+color: #fff;  
+border: none;
+outline: none;
+border-radius: 20px;
+font-size: 0.8rem;
+font-weight: bold;
+cursor: pointer;
+justify-content: flex-end;  
+padding: 0.5rem 1rem;
+/* margin-right: -120px; */
+}
+
+.action_btn:hover,.action_btn:focus { 
+  scale: 1.05;
+  background-color: #7428DB;
+  color: #ffffff;
+}
+/* Media query pour les petits écrans d'ordinateur (1024px à 1279px) */
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+  .navbar .logo a {
+    display: block; /* Afficher le logo */
+  }
+}
+
+/* Media query pour les tablettes (768px à 1023px) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .navbar .logo a {
+    display: block;
+    margin-left: 20px; /* Ajoutez la marge à gauche désirée pour le logo */
+  }
+  .navbar .links {
+    display: none;
+  }
+
+  .burger-menu {
+    margin: 30px; /* Ajoutez la marge à gauche désirée pour le burger-menu */
+    display: block;
+    font-size: 24px; /* Ajoutez la taille de police appropriée pour le bouton de bascule */
+    cursor: pointer;
+  }
+
+  .action_btn {
+    margin: auto;
+    text-align: center; /* Centrez le bouton */
+  }
+
+  .links.active {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 87px;
+    left: 0;
+    background-color: #F7D101;
+    text-align: center;
+    z-index: 999;
+  }
+}
+
+/* Media query pour les écrans mobiles (jusqu'à 767px) */
+@media screen and (max-width: 767px) {
+  .navbar .logo a {
+    display: block;
+    margin-left: 30px; /* Ajoutez la marge à gauche désirée pour le logo */
+  }
+
+  .navbar .links {
+    display: none;
+  }
+
+  header .navbar a.active {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  .burger-menu {
+    display: block;
+    margin: 30px; /* Ajoutez la marge à gauche désirée pour le burger-menu */
+  }
+
+  .links.active {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 87px;
+    left: 0;
+    background-color: #F7D101;
+    text-align: center;
+    z-index: 999;
+  }
+  .action_btn1 {
+    margin-left: 100px ;
+    margin-bottom: -500px;
+   align-self: center; /* Centrez le bouton */
+  }
+    /* Ajoutez une marge et une bordure autour de l'élément cible */
+
+}
+  .register_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(/img/jj.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .register{
+    width: 750px;
+    border-radius: 10px;
+    color: #fff;
+    background:rgba(255,255,255,.1);
+    border: 2px solid rgba(255, 255, 255, .2);
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+    backdrop-filter: blur(50px);
+    padding: 40px 35px 55px ;
+    margin: 0 10px;
+  }
+  .register h1{
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .register .input_box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .input_box .input_field{
+    position: relative;
+    width: 48%;
+    height: 50px;
+    margin: 13px 0;
+  }
+  .input_box .input_field input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,2);
+    outline: none;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 6px;
+    padding: 15px 15px 15px 40px;
+  }
+  .input_box .input_field input::placeholder{
+    color: #fff;
+  }
+  .input_box .input_field i{
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .input_box .input_field input:focus{
+    border: 2px solid #FE6344;
+    transform: scale3d(.6);
+    color: #fff;
+  }
+  .error-message {
+    display: none; /* Masque initialement le message d'erreur */
+    color: red; /* Couleur du texte en cas d'erreur */
+    font-size: 12px; /* Taille de la police du message d'erreur */
+    margin-top: 5px; /* Espacement vers le haut pour éviter les chevauchements */
+}
+.success-message {
+    display: none; /* Par défaut, masquez le message de succès */
+    color: #009900; /* Couleur du texte en vert */
+    font-size: 10px; /* Taille de police */
+    font-weight: bold; /* Texte en gras */
+    margin-top: 4px; 
+    margin-left: 5px;/* Marge vers le haut pour l'espacement */
+}
+  .register label{
+    display: inline-block;
+    font-size: 14.5px;
+    margin: 10px 0 23px;
+  }
+  .register label input{
+    accent-color: #fff;
+    margin-right: 5px;
+  }
+  .register .btn{
+    width: 100%;
+    height: 45px;
+    background: #FE6344;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+
+  }
+
+@media (max-width:576px){
+    .input_box .input_field{
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+
+
+footer{
+  background-color: #111;
+
+}
+.footerContainer{
+  width: 100%;
+  height: 244px;
+  padding: 30px 30px 20px;
+}
+
+.footer_social{
+  display: flex;
+  justify-content: center;
+}
+
+.footer_social a{
+    padding: 10px;
+    background-color: white;
+    border-radius: 20pc;
+    margin: 10px;
+ 
+}
+.footer_social a i{
+    font-size: 2em;
+    color: #000;
+    opacity: 0.9;
+}
+.footerNav{
+  margin: 30px 0;
+}
+
+.footerNav ul{
+  display: flex;
+  justify-content: center;
+}
+
+.footerNav ul li a{
+  color: #fff;
+  margin: 20px;
+  font-size: 1.3rem;
+  opacity: 0.7;
+  transition:0.5s ;
+}
+.footerNav ul li a:hover{
+  opacity: 1;
+}
+.footerNav ul li a.active{
+  color: #FE6344;
+  font-weight: bold;
+  border-bottom: 2px solid #FE6344;
+  padding-bottom: 5px; /* Add some padding at the bottom */
+}
+.footerBottom{
+  padding-bottom: 20px;
+}
+.footerBottom p{
+  text-align: center;
+  color: #fff;
+  margin: 20px;
+  font-size: 1.3rem;
+
+}
+.designer{
+  color: #FE6344;
+  letter-spacing: 1px;
+  font-weight: 400;
+  margin: 0px 5px;
+}
+/* Styles pour les écrans de grande taille */
+@media (min-width: 1280px) {
+  .footerContainer {
+    padding: 30px;
+  }
+}
+
+/* Styles pour les écrans de taille moyenne (petit écran d'ordinateur) */
+@media (max-width: 1279px) {
+  .footerContainer {
+    padding: 20px;
+  }
+}
+
+/* Styles pour les tablettes */
+@media (max-width: 1023px) {
+  .footerContainer {
+    padding: 10px;
+  }
+}
+
+/* Styles pour les écrans mobiles */
+@media (max-width: 767px) {
+  .footerContainer {
+    padding: 5px;
+  }
+  .footer_social {
+    justify-content: center;
+  }
+  .footer_social a {
+    margin: 5px;
+  }
+  .footer_social a i {
+    font-size: 1em;
+  }
+  .footerNav ul li {
+    margin: -12px;
+  }
+}

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/galerie_style.css">
     <!--import font google -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -15,24 +15,33 @@
     <link rel="shortcut icon" href="./img/jj.jpg" > 
 </head>
 <body>
-        <!-- start navbar-->
-        <header>
+          <!-- start navbar-->
+          <header>
             <div class="navbar">
                 <div class="logo">
-                    <a href="index.html"> FITPRO </a>
+                    <a href="index.html" class="icon-link">
+                        FIT <!-- <img src="./img/favicon/Muscle.png" alt="Muscle Icon"> -->PRO 
+                      </a>
                 </div>
                 <ul class="links">
-                    <li><a  href="index.html">Home</a></li>
-                    <li><a class="active" href="gelerie.html">Galerie</a></li>
+                    <li><a   href="index.html">Home</a></li>
+                    <li><a  class="active"   href="gelerie.html">Galerie</a></li>
                     <li><a href="programs.html">Programs</a></li>
                 </ul>
                 <a href="index.html" class="action_btn">Get Started</a>
-                <!-- <div class="toggle_btn">
-                    <i class="fa-solid fa-bars" style="color: #00060f;"></i>
-                </div>   -->
+                <div class="burger-menu">&#9776;</div>
+                
              </div>
         </header>
           <!--end navbar-->
+        <script>
+            const burgerMenu = document.querySelector('.burger-menu');
+                const navLinks = document.querySelector('.links');
+
+                burgerMenu.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                });
+        </script>
         <section>
             <ul>
                 <li class="list active" data-filter="all">All Photos</li>
@@ -42,94 +51,70 @@
             </ul>
             <div class="product">
                     <div class="itemBox" data-item="equipement">
-                        <img src="./img/jj.jpg">
+                        <img src="./img/equipement/eqq.jpg">
                     </div>
                     <div class="itemBox" data-item="trainer">
-                        <img src="./img/img2.png">
+                        <img src="./img//gym/istockphoto-1195045259-612x612.jpg">
+                    </div>
+                    <div class="itemBox" data-item="trainer">
+                        <img src="./img/gym/istockphoto-1196808820-612x612.jpg">
+                    </div>
+                    <div class="itemBox" data-item="trainer">
+                        <img src="./img/gym/istockphoto-901086374-612x612.jpg">
+                    </div>
+                    <div class="itemBox" data-item="equipement">
+                        <img src="./img/equipement/eq1.jpg">
                     </div>
                     <div class="itemBox" data-item="gym">
-                        <img src="./img/img4.png">
+                        <img src="./img/gym1.jpg">
                     </div>
+                    <div class="itemBox" data-item="trainer">
+                        <img src="./img/fit2.jpg">
+                    </div>
+                    <div class="itemBox" data-item="trainer">
+                        <img src="./img/gym/trainer.jpg">
+                    </div>
+                    <div class="itemBox" data-item="equipement">
+                        <img src="./img/equipement/craig-lovelidge-yDGsn39fbD4-unsplash.jpg">
+                    </div>
+                    <div class="itemBox" data-item="equipement">
+                        <img src="./img/equipement/eq2.jpg">
+                    </div>
+                   
+                    <div class="itemBox" data-item="equipement">
+                        <img src="./img/equipement/eq5.jpg">
+                    </div>
+                    <div class="itemBox" data-item="gym">
+                        <img src="./img/gym2.jpg">
+                    </div>
+                   
                     <div class="itemBox" data-item="trainer">
                         <img src="./img/fit3.jpg">
                     </div>
                     <div class="itemBox" data-item="equipement">
-                        <img src="./img/img1.png">
-                    </div>
-                    <div class="itemBox" data-item="equipement">
-                        <img src="./img/jj.jpg">
-                    </div>
-                    <div class="itemBox" data-item="trainer">
-                        <img src="./img/img2.png">
+                        <img src="./img/equipement/samuel-girven-2e4lbLTqPIo-unsplash.jpg">
                     </div>
                     <div class="itemBox" data-item="gym">
-                        <img src="./img/img4.png">
-                    </div>
-                    <div class="itemBox" data-item="trainer">
-                        <img src="./img/fit3.jpg">
-                    </div>
-                    <div class="itemBox" data-item="equipement">
-                        <img src="./img/img1.png">
-                    </div>
-                    <div class="itemBox" data-item="equipement">
-                        <img src="./img/jj.jpg">
-                    </div>
-                    <div class="itemBox" data-item="trainer">
-                        <img src="./img/img2.png">
+                        <img src="./img/gym3.jpg">
                     </div>
                     <div class="itemBox" data-item="gym">
-                        <img src="./img/img4.png">
-                    </div>
-                    <div class="itemBox" data-item="trainer">
-                        <img src="./img/fit3.jpg">
+                        <img src="./img/gym4.jpg">
                     </div>
                     <div class="itemBox" data-item="equipement">
                         <img src="./img/img1.png">
                     </div>
+                  
                     <div class="itemBox" data-item="equipement">
-                        <img src="./img/jj.jpg">
-                    </div>
-                    <div class="itemBox" data-item="trainer">
-                        <img src="./img/img2.png">
+                        <img src="./img/gym/eq10.jpg">
                     </div>
                     <div class="itemBox" data-item="gym">
-                        <img src="./img/img4.png">
-                    </div>
-                    <div class="itemBox" data-item="trainer">
-                        <img src="./img/fit3.jpg">
-                    </div>
-                    <div class="itemBox" data-item="equipement">
-                        <img src="./img/img1.png">
-                    </div>
-                    <div class="itemBox" data-item="equipement">
-                        <img src="./img/jj.jpg">
-                    </div>
-                    <div class="itemBox" data-item="trainer">
-                        <img src="./img/img2.png">
+                        <img src="./img/gym/gym18.jpg">
                     </div>
                     <div class="itemBox" data-item="gym">
-                        <img src="./img/img4.png">
-                    </div>
-                    <div class="itemBox" data-item="trainer">
-                        <img src="./img/fit3.jpg">
-                    </div>
-                    <div class="itemBox" data-item="equipement">
-                        <img src="./img/img1.png">
-                    </div>
-                    <div class="itemBox" data-item="equipement">
-                        <img src="./img/jj.jpg">
-                    </div>
-                    <div class="itemBox" data-item="trainer">
-                        <img src="./img/img2.png">
+                        <img src="./img/gym/gyym.jpg">
                     </div>
                     <div class="itemBox" data-item="gym">
-                        <img src="./img/img4.png">
-                    </div>
-                    <div class="itemBox" data-item="trainer">
-                        <img src="./img/fit3.jpg">
-                    </div>
-                    <div class="itemBox" data-item="equipement">
-                        <img src="./img/img1.png">
+                        <img src="./img/gym/gym14.jpg">
                     </div>
                 </div>
         </section>
@@ -166,5 +151,26 @@
         })
         }
     </script>
+      <footer>
+        <div class="footerContainer">
+            <div class="footer_social">
+                <a class="icon" href="https://www.instagram.com/fitpro_/" > <i class="fa-brands fa-square-instagram" style="color: #00040a;"></i></a>
+                <a class="icon" href="https://www.facebook.com/Fitpro-10090909090909/" ><i class="fa-brands fa-facebook"></i></a> 
+                <a class="icon" href="https://www.twitter.com/fitpro_/" ><i class="fa-brands  fa-twitter"></i></a> 
+                <a class="icon" href="https://www.youtub.com/fitpro_/" ><i class="fa-brands fa-youtube" style="color: #000000;"></i></a> 
+            </div>
+            <div class="footerNav">
+                <ul>
+                    <li><a class="active"  href="index.html">Home</a></li>
+                    <li><a href="gelerie.html">Galerie</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="register.html">Subscribe</a></li>
+                </ul>
+            </div>
+            <div class="footerBottom">
+                <p>Copyright &copy;2023; Designed by <span class="designer">ER-RADA OUMAIMA</span></p>
+            </div> 
+        </div>    
+    </footer> 
 </body>
 </html>
