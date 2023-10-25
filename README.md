@@ -16,6 +16,6 @@ Utilisez HTML pour structurer le contenu de chaque page.<br>
 Utilisez CSS pour styliser le site en fonction du design Figma.
 
 ## lien github:
-
+https://github.com/oumaima2000-inf/fitness_website
 ## lien vers FIGMA:
 https://www.figma.com/file/vD2IyAoKJPXMyDgwU75L3w/FiTPRO?type=design&node-id=2%3A3&mode=design&t=FmoXxZcZeQYQ57Kc-1
